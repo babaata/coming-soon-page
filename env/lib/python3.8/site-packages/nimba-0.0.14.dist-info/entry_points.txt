@@ -1,0 +1,3 @@
+[console_scripts]
+nimba = nimba.apps:mont_nimba
+
