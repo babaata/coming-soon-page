@@ -1,0 +1,23 @@
+name: Build & Deploy
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Deploy Regitor Api
+        uses: appleboy/ssh-action@v0.1.4
+        with:
+          host: ${{secrets.SSH_HOST}} 
+          key: ${{secrets.SSH_KEY}}
+          username: ${{ secrets.SSH_USERNAME }}
+          script: |
+            rm -rf coming-soon-page
+            git clone git@github.com:babaata/coming-soon-page.git
+            cd coming-soon-page
+            docker-compose up -d --build
+            echo 'Deployment successful'
