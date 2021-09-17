@@ -1418,11 +1418,11 @@ a:focus {
 
 @font-face {
   font-family: "icomoon";
-  src: url("icomoon.eot?-3p8lp4");
-  src: url("icomoon.eot?#iefix-3p8lp4") format("embedded-opentype"),
-    url("icomoon.woff?-3p8lp4") format("woff"),
-    url("icomoon.ttf?-3p8lp4") format("truetype"),
-    url("icomoon.svg?-3p8lp4#icomoon") format("svg");
+  src: url("/static/icomoon.eot");
+  src: url("/static/icomoon.eot") format("embedded-opentype"),
+    url("/static/icomoon.woff") format("woff"),
+    url("/static/icomoon.ttf") format("truetype"),
+    url("/static/icomoon.svg") format("svg");
   font-weight: normal;
   font-style: normal;
 }
