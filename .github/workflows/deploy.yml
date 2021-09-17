@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Deploy Regitor Api
+      - name: Deploy
         uses: appleboy/ssh-action@v0.1.4
         with:
           host: ${{secrets.SSH_HOST}} 
