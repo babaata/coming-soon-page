@@ -20,6 +20,6 @@ RUN pip install -r requirements.txt
 
 COPY . /app
 
-ENTRYPOINT [ "python" ]
+COPY ./entrypoint.sh $MICRO_SERVICE
 
-CMD [ "app.py" ]
+CMD ["/bin/bash", "/app/entrypoint.sh"]
